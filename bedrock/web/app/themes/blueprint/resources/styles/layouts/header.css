@@ -1,0 +1,48 @@
+/* Header */
+
+/* burger */
+.burger {
+  @apply relative block w-7 h-5;
+}
+
+.burger div {
+  @apply block absolute h-0.5 bg-black w-full opacity-100 left-0 rotate-0 transform transition;
+}
+
+.burger div:nth-child(1) {
+  @apply top-0;
+}
+
+.burger div:nth-child(2),
+.burger div:nth-child(3) {
+  @apply top-2.5;
+}
+
+.burger div:nth-child(4) {
+  @apply top-5;
+}
+
+.menu-open .burger div:nth-child(1) {
+  @apply w-0 top-2.5 left-1/2 opacity-0;
+}
+
+.menu-open .burger div:nth-child(2) {
+  @apply rotate-45;
+}
+
+.menu-open .burger div:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.menu-open .burger div:nth-child(4) {
+  @apply w-0 top-2.5 left-1/2 opacity-0;
+}
+
+/* Nav layer */
+.mobile-layer {
+  @apply fixed inset-0 w-screen h-screen overflow-y-auto bg-white z-30 flex flex-col -translate-y-full transform transition-transform duration-500 ease-in-out;
+
+  .menu-open & {
+    @apply translate-y-0;
+  }
+}

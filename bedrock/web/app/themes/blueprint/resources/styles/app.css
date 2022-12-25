@@ -1,0 +1,43 @@
+@import "common/fonts";
+
+@import "tailwindcss/base";
+
+/* @import "swiper/swiper-bundle.min.css"; */
+/* @import "video.js/dist/video-js.css"; */
+
+@import "common/global";
+@import "components/buttons";
+@import "components/player";
+@import "components/swiper";
+@import "components/forms";
+@import "layouts/header";
+@import "layouts/page";
+@import "layouts/footer";
+
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  @variants responsive {
+    .scrollbar-none::-webkit-scrollbar {
+      @apply hidden;
+    }
+
+    .scrollbar-none {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .container-fluid {
+      @apply w-screen grid grid-cols-6 md:grid-cols-12 gap-3 px-5 md:px-12;
+    }
+
+    .h-screen {
+      height: calc(var(--vh, 1vh) * 100);
+    }
+
+    .min-h-screen {
+      min-height: calc(var(--vh, 1vh) * 100);
+    }
+  }
+}

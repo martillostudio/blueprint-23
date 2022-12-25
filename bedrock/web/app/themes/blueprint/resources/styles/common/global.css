@@ -1,0 +1,15 @@
+html {
+  @apply min-h-screen;
+}
+
+body {
+  @apply w-screen min-h-screen text-base text-black bg-white font-sans antialiased overflow-x-hidden;
+}
+
+#app {
+  @apply relative w-screen min-h-screen flex flex-col justify-between;
+}
+
+#main {
+  @apply relative z-20 flex-1;
+}
