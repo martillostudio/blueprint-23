@@ -39,7 +39,7 @@ export default async (app) => {
     /**
      * URI of the `public` directory
      */
-    .setPublicPath("/app/themes/blueprint/public/")
+    // .setPublicPath("/app/themes/blueprint/public/")
 
     /**
      * Generate WordPress `theme.json`

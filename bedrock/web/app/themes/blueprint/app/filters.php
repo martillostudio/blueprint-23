@@ -176,5 +176,5 @@ add_action('nav_menu_css_class', __NAMESPACE__ . '\\add_current_nav_class', 10, 
  */
 add_filter('custom_menu_order', '__return_true');
 add_filter('menu_order', function () {
-    return array('edit.php?post_type=page', 'edit.php', 'edit.php?post_type=project', 'separator1', 'upload.php',);
+    return array('index.php', 'upload.php', 'separator1', 'edit.php?post_type=page', 'edit.php', 'edit.php?post_type=project', 'separator2', 'themes.php', 'plugins.php', 'users.php', 'tools.php',  'separator-last');
 });

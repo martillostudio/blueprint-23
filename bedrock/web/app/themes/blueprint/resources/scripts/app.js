@@ -15,18 +15,20 @@ const main = async () => {
   });
 
   // Add tarfet _blank to all external links
-  const links = document.querySelectorAll("a");
-  links.forEach((link) => {
-    if (link.hostname !== window.location.hostname) {
-      link.target = "_blank";
-    }
-  });
+  if (document.querySelector("a")) {
+    document.querySelectorAll("a").forEach((link) => {
+      if (link.hostname !== window.location.hostname) {
+        link.target = "_blank";
+      }
+    });
+  }
 
   // Toggle burger
-  const burger = document.querySelector(".burger");
-  burger.addEventListener("click", (_) => {
-    document.body.classList.toggle("menu-open");
-  });
+  if (document.querySelector(".burger")) {
+    document.querySelector(".burger").addEventListener("click", (_) => {
+      document.body.classList.toggle("menu-open");
+    });
+  }
 };
 
 /**

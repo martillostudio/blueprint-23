@@ -45,10 +45,10 @@ function update_post_label()
 {
     global $menu;
     global $submenu;
-    $submenu['edit.php'][5][0] = 'Projects';
-    $submenu['edit.php'][10][0] = 'Add project';
-    $menu[5][0] = 'Projects';
-    $menu[5][6] = 'dashicons-format-aside';
+    $submenu['edit.php'][5][0] =  __('Projects', 'martillo');
+    $submenu['edit.php'][10][0] = __('Add project', 'martillo');
+    $menu[5][0] = __('Projects', 'martillo');
+    $menu[5][6] = 'dashicons-admin-page';
 }
 add_action('admin_menu', __NAMESPACE__ . '\\update_post_label');
 
@@ -56,19 +56,19 @@ function update_post_name()
 {
     global $wp_post_types;
     $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Projects';
-    $labels->singular_name = 'Project';
-    $labels->add_new = 'Add Project';
-    $labels->add_new_item = 'Add Project';
-    $labels->edit_item = 'Edit Project';
-    $labels->new_item = 'Project';
-    $labels->view_item = 'View Project';
-    $labels->search_items = 'Search Project';
-    $labels->not_found = 'No Projects found';
-    $labels->not_found_in_trash = 'No Projects found in Trash';
-    $labels->all_items = 'All Projects';
-    $labels->menu_name = 'Projects';
-    $labels->name_admin_bar = 'Projects';
+    $labels->name = __('Projects', 'martillo');
+    $labels->singular_name = __('Projects', 'martillo');
+    $labels->add_new = __('Add Project', 'martillo');
+    $labels->add_new_item = __('Add Project', 'martillo');
+    $labels->edit_item = __('Edit Project', 'martillo');
+    $labels->new_item = __('Project', 'martillo');
+    $labels->view_item = __('View Project', 'martillo');
+    $labels->search_items = __('Search Project', 'martillo');
+    $labels->not_found = __('No Projects found', 'martillo');
+    $labels->not_found_in_trash = __('No Projects found in Trash', 'martillo');
+    $labels->all_items = __('All Projects', 'martillo');
+    $labels->menu_name = __('Projects', 'martillo');
+    $labels->name_admin_bar = __('Projects', 'martillo');
 }
 add_action('init', __NAMESPACE__ . '\\update_post_name');
 
@@ -79,9 +79,12 @@ add_action('acf/init', function () {
 
     // Add parent.
     $parent = acf_add_options_page(array(
-        'page_title'  => __('Thme Settings', 'martillo'),
-        'menu_title'  => __('Thme Settings', 'martillo'),
+        'page_title'  => __('Common', 'martillo'),
+        'menu_title'  => __('Common', 'martillo'),
         'redirect'    => true,
+        'position'    => '80',
+        'icon_url'    => 'dashicons-editor-table',
+
     ));
 
     // Add sub page.
