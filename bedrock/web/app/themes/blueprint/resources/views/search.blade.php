@@ -10,7 +10,7 @@
   </article>
   @endif
 
-  @while(have_posts()) @php(the_post())
+  @while(have_posts()) @php the_post(); @endphp
 
   @endwhile
 

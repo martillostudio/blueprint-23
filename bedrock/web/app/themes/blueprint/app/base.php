@@ -79,8 +79,8 @@ add_action('acf/init', function () {
 
     // Add parent.
     $parent = acf_add_options_page(array(
-        'page_title'  => __('Common', 'martillo'),
-        'menu_title'  => __('Common', 'martillo'),
+        'page_title'  => __('Global Options', 'martillo'),
+        'menu_title'  => __('Global Options', 'martillo'),
         'redirect'    => true,
         'position'    => '80',
         'icon_url'    => 'dashicons-editor-table',

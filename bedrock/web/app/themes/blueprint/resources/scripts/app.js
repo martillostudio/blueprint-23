@@ -24,9 +24,11 @@ const main = async () => {
   }
 
   // Toggle burger
-  if (document.querySelector(".burger")) {
-    document.querySelector(".burger").addEventListener("click", (_) => {
-      document.body.classList.toggle("menu-open");
+  if (document.querySelector(".toggle-nav")) {
+    document.querySelectorAll(".toggle-nav").forEach((element) => {
+      element.addEventListener("click", (_) => {
+        document.body.classList.toggle("show-nav");
+      });
     });
   }
 };

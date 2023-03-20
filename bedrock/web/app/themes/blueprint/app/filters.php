@@ -72,18 +72,17 @@ add_filter('disable_wpseo_json_ld_search', '__return_true');
  */
 add_action('login_enqueue_scripts', function () {
 ?>
-<style type="text/css">
-#login h1 a,
-.login h1 a {
-    background-image: url(<?php echo get_template_directory_uri();
-    ?>/resources/images/admin-logo.svg);
-    width: auto;
-    height: 56px;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    padding-bottom: 0;
-}
-</style>
+    <style type="text/css">
+        #login h1 a,
+        .login h1 a {
+            background-image: url(<?php echo get_template_directory_uri(); ?>/resources/images/admin-logo.svg);
+            width: auto;
+            height: 56px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            padding-bottom: 0;
+        }
+    </style>
 <?php
 });
 
@@ -92,7 +91,7 @@ add_action('login_enqueue_scripts', function () {
  */
 add_action('admin_init', function () {
     add_filter('admin_footer_text', function () {
-        return 'made with <span style="color: #D10000;">&hearts;</span> by <a href="https://martillo.studio" target="blank">martillo</a>';
+        return 'Powered by <a href="https://martillo.studio" target="blank">martillo</a>';
     }, 11);
     add_filter('update_footer', '__return_false', 11);
 });

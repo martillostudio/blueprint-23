@@ -12,7 +12,7 @@
   </nav>
   @endif
 
-  <div class="col-span-2 flex justify-end md:hidden">
+  <div class="col-span-2 flex justify-end md:hidden toggle-nav">
     <div class="burger">
       <div></div>
       <div></div>
